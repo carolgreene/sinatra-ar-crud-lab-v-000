@@ -15,8 +15,7 @@ class ApplicationController < Sinatra::Base
 
   post '/posts' do
     @post = Post.create(params)
-    #@posts = Post.all
-    redirect to '/posts'               #solution has redirect to '/posts' instead of this
+    @posts = Post.all           #solution has redirect to '/posts' instead of this. ckd it and it works         
     erb :index
   end
 
